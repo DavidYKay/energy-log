@@ -32,8 +32,8 @@ public class AppService extends WakefulIntentService {
 
   @Override
   protected void doWakefulWork(Intent intent) {
-    File log=new File(Environment.getExternalStorageDirectory(),
-                      "AlarmLog.txt");
+    File log=new File(Environment.getExternalStorageDirectory(), "AlarmLog.txt");
+    //File log=new File(Environment.getInternalStorageDirectory(), "AlarmLog.txt");
     
     try {
       BufferedWriter out=new BufferedWriter(
