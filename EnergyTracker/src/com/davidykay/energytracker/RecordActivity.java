@@ -51,7 +51,6 @@ public class RecordActivity extends RoboActivity {
           // TODO Auto-generated catch block
           e.printStackTrace();
         }
-
         finish();
       }
 

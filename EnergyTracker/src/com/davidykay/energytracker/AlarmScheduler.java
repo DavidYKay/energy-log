@@ -15,8 +15,7 @@ public class AlarmScheduler {
   private static final int SECOND = 1000 * MILLISECOND;
   private static final int MINUTE = 60 * SECOND;
 
-  // private static final int PERIOD = 5 * MINUTE;
-  private static final int PERIOD = 10 * SECOND;
+  private static final int PERIOD = 15 * MINUTE;
 
   private Context mContext;
   private AlarmManager mAlarmManager;

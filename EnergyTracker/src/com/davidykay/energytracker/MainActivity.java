@@ -22,7 +22,6 @@ import com.davidykay.energytracker.model.Rating;
 import com.j256.ormlite.dao.Dao;
 
 public class MainActivity extends RoboListActivity {
-
   private void writeFileToDir() throws IOException {
     String FILENAME = "hello_file";
     String string = "hello world!";

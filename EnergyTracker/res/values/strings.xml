@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OnBootReceiver</string>
+    <string name="app_name">Energy Tracker</string>
+    
+    <string name="notification_title">Energy Tracker</string>
+    <string name="notification_message">Please Track Your Energy</string>
+    <string name="notification_short">@string/notification_message</string>
 </resources>
