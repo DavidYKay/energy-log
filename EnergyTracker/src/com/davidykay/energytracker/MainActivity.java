@@ -105,12 +105,9 @@ public class MainActivity extends RoboListActivity {
         wrapper = (RatingRowWrapper)row.getTag();
       }
 
+      // actual logic to populate row from Cursor goes here
       Rating rating = mRatings[position];
 
-      // actual logic to populate row from Cursor goes here
-      wrapper.getTitle().setText(rating.getNiceTime());
-
-      //wrapper.getName().setText(rating.value);
 
       float value = rating.value;
       String starString = "";
@@ -119,6 +116,9 @@ public class MainActivity extends RoboListActivity {
       }
 
       wrapper.getSubtitle().setText(
+          rating.getNiceTime()
+      );
+      wrapper.getTitle().setText(
           starString
           );
 
