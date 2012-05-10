@@ -108,19 +108,23 @@ public class MainActivity extends RoboListActivity {
       // actual logic to populate row from Cursor goes here
       Rating rating = mRatings[position];
 
-
       float value = rating.value;
-      String starString = "";
-      for (int i = 0; i < value; i++) {
-        starString += "*";
-      }
+      wrapper.getRatingBar().setRating(value);
+      //String starString = "";
+      //for (int i = 0; i < value; i++) {
+      //  starString += "*";
+      //}
+      //wrapper.getTitle().setText(
+      //    starString
+      //    );
 
+      //wrapper.getSubtitle().setText(
+      //    rating.getNiceTime()
+      //);
       wrapper.getSubtitle().setText(
           rating.getNiceTime()
       );
-      wrapper.getTitle().setText(
-          starString
-          );
+
 
       //String thumbUrl = cursor.getString(cursor.getColumnIndex(Ratings.THUMB_URL));
       //mImageLoader.DisplayImage(

@@ -6,12 +6,12 @@
   android:padding="10dip"
   android:background="#eef1f3"
   >
-  <RelativeLayout 
+  <RelativeLayout
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
     <!-- Holds Photo and Name -->
-    <RelativeLayout 
+    <RelativeLayout
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
       android:layout_weight="80"
@@ -21,7 +21,7 @@
         android:layout_width="52dp"
         android:layout_height="52dp"
            -->
-      <ImageView  
+      <ImageView
         android:id="@+id/article_image"
         android:src="@drawable/rating_placeholder"
         android:layout_width="62dp"
@@ -32,7 +32,7 @@
         android:paddingRight="10dp"
         android:visibility="gone"
         />
-      <LinearLayout 
+      <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/article_image"
@@ -52,6 +52,21 @@
           android:textStyle="bold"
           android:shadowColor="#fff"
           android:shadowDx="1"
+
+          android:visibility="gone"
+          />
+        <RatingBar
+          android:id="@+id/rating"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentLeft="true"
+          android:shadowColor="#fff"
+          android:shadowDx="1"
+
+          android:numStars="5"
+          android:stepSize="1.0"
+          android:isIndicator="true"
           />
         <TextView
           android:id="@+id/subtitle"
@@ -66,8 +81,8 @@
           android:shadowColor="#fff"
           android:shadowDx="1"
           />
-      </LinearLayout> 
-    </RelativeLayout> 
+      </LinearLayout>
+    </RelativeLayout>
     <ImageView  android:id="@+id/detail_arrow"
       android:src="@drawable/button_play"
       android:layout_width="16dp"
