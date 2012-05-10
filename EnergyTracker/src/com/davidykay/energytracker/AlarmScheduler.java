@@ -15,8 +15,8 @@ public class AlarmScheduler {
   private static final int SECOND = 1000 * MILLISECOND;
   private static final int MINUTE = 60 * SECOND;
 
-  //private static final int PERIOD = 15 * MINUTE;
-  private static final int PERIOD = 10 * SECOND;
+  private static final int PERIOD = 15 * MINUTE;
+  //private static final int PERIOD = 10 * SECOND;
 
   private Context mContext;
   private AlarmManager mAlarmManager;
@@ -26,7 +26,6 @@ public class AlarmScheduler {
     mContext = context;
     mAlarmManager = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
   }
-  
 
   public void cancelAlarms() {
     mAlarmManager.cancel(createPendingIntent());
