@@ -68,7 +68,7 @@ public class MainActivity extends RoboListActivity {
     List<Rating> ratingList = null;
     try {
       ratingDao = databaseHelper.getDao();
-      ratingList = ratingDao.queryForAll();
+      ratingList = ratingDao.queryBuilder().orderBy("time", false).query();
     } catch (SQLException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
