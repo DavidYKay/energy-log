@@ -4,16 +4,26 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   >
-  
-  <ToggleButton 
+
+  <ToggleButton
     android:id="@+id/toggle_button"
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_centerInParent="true"
 
     android:textOn="Notifications on"
     android:textOff="Notifications off"
     android:onClick="onToggleClicked"
+    />
+
+  <Button
+    android:id="@+id/list_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+
+    android:text="List"
+    android:onClick="onListClicked"
     />
 
 </RelativeLayout>

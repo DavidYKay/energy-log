@@ -1,6 +1,7 @@
 package com.davidykay.energytracker;
 
 import roboguice.activity.RoboActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -28,6 +29,11 @@ public class ScheduleAlarmsActivity extends RoboActivity {
       Toast.makeText(ScheduleAlarmsActivity.this, "Notifications off", Toast.LENGTH_SHORT).show();
       mAlarmScheduler.cancelAlarms();
     }
+  }
+
+  public void onListClicked(View v) {
+    Intent i = new Intent(this, MainActivity.class);
+    startActivity(i);
   }
 
 }
