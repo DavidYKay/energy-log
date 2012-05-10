@@ -1,17 +1,33 @@
 package com.davidykay.energytracker;
 
-import android.app.Activity;
+import roboguice.activity.RoboActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
-public class ScheduleAlarmsActivity extends Activity {
+import com.google.inject.Inject;
+
+public class ScheduleAlarmsActivity extends RoboActivity {
+
+  @Inject private AlarmScheduler mAlarmScheduler;
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    
-    new AlarmScheduler(this).scheduleAlarms();
-    Toast.makeText(this, "Alarms active!", Toast.LENGTH_LONG).show();
-    finish();
+
+    setContentView(R.layout.schedule);
   }
+
+  public void onToggleClicked(View v) {
+    // Perform action on clicks
+    if (((ToggleButton) v).isChecked()) {
+      Toast.makeText(ScheduleAlarmsActivity.this, "Notifications on", Toast.LENGTH_SHORT).show();
+      mAlarmScheduler.scheduleAlarms();
+    } else {
+      Toast.makeText(ScheduleAlarmsActivity.this, "Notifications off", Toast.LENGTH_SHORT).show();
+      mAlarmScheduler.cancelAlarms();
+    }
+  }
+
 }
