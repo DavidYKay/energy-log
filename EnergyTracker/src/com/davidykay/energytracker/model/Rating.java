@@ -3,7 +3,6 @@ package com.davidykay.energytracker.model;
 import java.util.Date;
 
 import android.text.format.DateUtils;
-import android.text.format.Time;
 
 import com.j256.ormlite.field.DatabaseField;
 
