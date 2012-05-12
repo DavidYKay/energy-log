@@ -16,25 +16,25 @@ import com.jjoe64.graphview.GraphView.GraphViewSeries;
 import com.jjoe64.graphview.LineGraphView;
 
 public class GraphActivity extends RoboActivity {
-  
+
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    
+
     //final DateFormat formatter = DateFormat.getDateInstance();
     final DateFormat formatter = DateFormat.getTimeInstance();
 
-    LineGraphView graphView = new LineGraphView(this, "Energy Levels over Time") {  
-      @Override  
-      protected String formatLabel(double value, boolean isValueX) {  
-        if (isValueX) {  
-          // convert unix time to human time  
-          //return dateTimeFormatter.format(new Date((long) value*1000));  
-          //return formatter.format(new Date((long) value*1000));  
-          return formatter.format(new Date((long)value));  
-        } else return super.formatLabel(value, isValueX); // let the y-value be normal-formatted  
-      }  
-    };  
+    LineGraphView graphView = new LineGraphView(this, "Energy Levels over Time") {
+      @Override
+      protected String formatLabel(double value, boolean isValueX) {
+        if (isValueX) {
+          // convert unix time to human time
+          //return dateTimeFormatter.format(new Date((long) value*1000));
+          //return formatter.format(new Date((long) value*1000));
+          return formatter.format(new Date((long)value));
+        } else return super.formatLabel(value, isValueX); // let the y-value be normal-formatted
+      }
+    };
 
     DatabaseHelper databaseHelper = new DatabaseHelper(this);
     Dao<Rating, Integer> ratingDao;
@@ -70,6 +70,8 @@ public class GraphActivity extends RoboActivity {
       graphData
     ));
     //graphView.setViewPort(2, 10);
+
+    graphView.setDrawBackground(true);
 
     graphView.setScalable(true);
 
