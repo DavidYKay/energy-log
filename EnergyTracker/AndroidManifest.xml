@@ -32,6 +32,9 @@
     <activity android:name="com.davidykay.energytracker.MainActivity">
     </activity>
     
+    <activity android:name="com.davidykay.energytracker.GraphActivity">
+    </activity>
+    
     <activity android:name="com.davidykay.energytracker.RecordActivity">
     </activity>
 

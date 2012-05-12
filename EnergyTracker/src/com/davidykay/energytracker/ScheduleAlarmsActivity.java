@@ -60,5 +60,10 @@ public class ScheduleAlarmsActivity extends RoboActivity {
     Intent i = new Intent(this, MainActivity.class);
     startActivity(i);
   }
+  
+  public void onGraphClicked(View v) {
+    Intent i = new Intent(this, GraphActivity.class);
+    startActivity(i);
+  }
 
 }

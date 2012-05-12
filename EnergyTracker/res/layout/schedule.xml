@@ -26,4 +26,14 @@
     android:onClick="onListClicked"
     />
 
+  <Button
+    android:id="@+id/graph_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/list_button"
+
+    android:text="Graph"
+    android:onClick="onGraphClicked"
+    />
+
 </RelativeLayout>
